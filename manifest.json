@@ -1,0 +1,22 @@
+{
+    "name": "Youtube Playlist BETA",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "...",
+
+    "background": {
+    "scripts": ["js/app.js"],
+    "persistent": false
+
+     },
+
+    "content_scripts": [{
+        "matches": ["https://www.youtube.com/*", "http://www.youtube.com/*"],
+        "css": ["css/yp.css"],
+        "js": ["js/jquery.js","js/app.js","js/funcoes.class.js"]
+    }],
+    "web_accessible_resources": [
+        "toolbar.html",
+        "css/yp.css"
+    ]
+}
