@@ -1,0 +1,11 @@
+body {
+    width: 200px;
+}
+
+input[type='button'] {
+    position: relative;
+    color: darkgray;
+    border: none;
+    text-transform: uppercase;
+
+}

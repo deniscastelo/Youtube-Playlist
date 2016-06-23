@@ -64,15 +64,11 @@ $(document).ready(function(){
 
     });
 
-    $(document).bind('DOMSubtreeModified', function () {
+    /*$(document).bind('DOMSubtreeModified', function () {
 
-    /*if ($(this).parents('.yt-lockup').find('.ytpldenislima-btn').length){
+        //...
 
-    } else{
-        //var btnYPL = "<button type='button' class='ytpldenislima-btn'>+</button>";
-        //$('.yt-lockup-thumbnail.contains-addto').append(btnYPL);
-    }*/
-    });
+    });*/
 
 });
 
