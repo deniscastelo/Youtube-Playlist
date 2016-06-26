@@ -12,7 +12,12 @@ ul {
 }
 
 h3 {
-  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+    font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+    position: absolute;
+    width: 250px;
+    height: 111px;
+    left: 240;
+    display: block;
 }
 
 li img {
@@ -33,7 +38,8 @@ li {
 li a{
   display: block;
   position: absolute;
-  width: 500px;
+  width: 458px;
+  left: 40px;
   height: 110px;
   margin: 0px;
 }
@@ -41,4 +47,9 @@ li a{
 li:hover {
   background: #eee;
   cursor: pointer;
+}
+
+#del {
+    z-index: 3;
+
 }

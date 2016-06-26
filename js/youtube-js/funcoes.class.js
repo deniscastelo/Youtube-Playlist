@@ -1,25 +1,47 @@
 $(function(){
 
 
+
     function Adicionar(link, title, thumbnail){
 
-        chrome.storage.sync.get("pl", function (d){
+            chrome.storage.sync.get("pl", function (d){
 
-            var lista = JSON.parse(d.pl);
+                if(d.pl === undefined){
+                    /* error */
+                    console.log(ytpl_title + ': Frist video add...');
 
-            var newVideo = JSON.stringify({
-                link: link,
-                title: title,
-                thumbnail: thumbnail
+                    var lista = [];
+
+                    var newVideo = JSON.stringify({
+                    link: link,
+                    title: title,
+                    thumbnail: thumbnail
+                    });
+
+                    lista.push(newVideo);
+
+                    chrome.storage.sync.set({"pl": JSON.stringify(lista)});
+
+                    console.log(ytpl_title + ": Video add...");
+
+                    return;
+                }
+
+                var lista = JSON.parse(d.pl);
+
+                var newVideo = JSON.stringify({
+                    link: link,
+                    title: title,
+                    thumbnail: thumbnail
+                });
+
+                lista.push(newVideo);
+
+                chrome.storage.sync.set({"pl": JSON.stringify(lista)});
+
+                console.log(ytpl_title + ": Video add...");
+
             });
-
-            lista.push(newVideo);
-
-            chrome.storage.sync.set({"pl": JSON.stringify(lista)});
-
-            console.log("registro adicionado!");
-
-        });
 
 
     }
@@ -48,9 +70,9 @@ $(function(){
         var title = $(this).parents('.yt-lockup').find('.yt-lockup-title a').attr('title');
         var thumbnail = $(this).parents('.yt-lockup').find('.yt-thumb-simple img').attr('src');
 
-        alert(link + "\n" +
+        /*alert(link + "\n" +
             title + "\n" +
-            thumbnail);
+            thumbnail);*/
 
         Adicionar(link,title,thumbnail);
 
