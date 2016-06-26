@@ -1,11 +1,44 @@
-body {
-    width: 200px;
+/* FORMATAÇÃO DA PLAYLIST */
+
+* { margin: 0; padding: 0}
+
+div#yt-playlist-table {
+  margin: auto;
 }
 
-input[type='button'] {
-    position: relative;
-    color: darkgray;
-    border: none;
-    text-transform: uppercase;
+ul {
+  list-style-type: none;
+  width: 500px;
+}
 
+h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+  z-index: -1;
+}
+
+li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+li {
+  padding: 10px;
+  overflow: auto;
+}
+
+li a{
+  display: block;
+  position: absolute;
+  width: 500px;
+  height: 110px;
+  margin: 0px;
+}
+
+li:hover {
+  background: #eee;
+  cursor: pointer;
 }
